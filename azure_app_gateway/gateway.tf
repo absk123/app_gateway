@@ -11,7 +11,7 @@ resource "azurerm_application_gateway" "Application_Gateway" {
     for_each = var.agw
   name                = each.key
   resource_group_name = var.rg[each.value.rgkey].name
-  location            = var.rg[each.value.rgkey].local
+  location            = var.rg[each.value.rgkey].location
 
   sku {
     name     = each.value.sku_name

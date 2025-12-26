@@ -20,12 +20,12 @@ resource "azurerm_application_gateway" "Application_Gateway" {
   }
 
   gateway_ip_configuration {
-    name      = "${each.key}-gateway_ip"
+    name      = "${each.key}_ip"
     subnet_id = var.sbnet[each.value.netkey].id
   }
 
   frontend_ip_configuration {
-    name                 = "${each.key}-frontend_ip"
+    name                 = "${each.key}_frontend_ip"
     public_ip_address_id = var.pip[each.value.ipkey].id
   }
 

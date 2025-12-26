@@ -1,10 +1,10 @@
 locals {
-  backend_address_pool_name      = "${azurerm_virtual_network.example.name}-beap"
-  frontend_port_name             = "${azurerm_virtual_network.example.name}-feport"
-  http_setting_name              = "${azurerm_virtual_network.example.name}-be-htst"
-  listener_name                  = "${azurerm_virtual_network.example.name}-httplstn"
-  request_routing_rule_name      = "${azurerm_virtual_network.example.name}-rqrt"
-  redirect_configuration_name    = "${azurerm_virtual_network.example.name}-rdrcfg"
+  backend_address_pool_name      = "beap"
+  frontend_port_name             = "feport"
+  http_setting_name              = "be-htst"
+  listener_name                  = "httplstn"
+  request_routing_rule_name      = "rqrt"
+  redirect_configuration_name    = "rdrcfg"
 }
 
 resource "azurerm_application_gateway" "Application_Gateway" {

@@ -49,7 +49,7 @@ resource "azurerm_application_gateway" "Application_Gateway" {
 
   http_listener {
     name                           = local.listener_name
-    frontend_ip_configuration_name = "${each.key}-frontend_ip"
+    frontend_ip_configuration_name = "${each.key}_frontend_ip"
     frontend_port_name             = local.frontend_port_name
     protocol                       = "Http"
   }
